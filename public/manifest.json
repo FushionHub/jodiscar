@@ -1,0 +1,28 @@
+{
+  "name": "JodisCars - Car Marketplace",
+  "short_name": "JodisCars",
+  "description": "Find your perfect car with secure payments, professional inspections, and trusted sellers",
+  "theme_color": "#1E40AF",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["business", "shopping"],
+  "lang": "en",
+  "dir": "ltr"
+}
