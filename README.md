@@ -1,4 +1,4 @@
-# JodisCars v1.0 - Comprehensive Car Marketplace PWA
+# JodisCars v1.2 - Comprehensive Car Marketplace PWA
 
 ![JodisCars Logo](https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=400)
 
@@ -243,25 +243,18 @@ POST /api/payments/refund - Process refund
 
 ## 🔄 Expected Updates (Roadmap)
 
-### Version 1.1 (Q2 2024)
 - **Enhanced AI Features**: Advanced car recommendations
 - **Mobile App**: Native iOS and Android applications
 - **Advanced Filters**: VIN lookup and detailed specifications
 - **Social Features**: User profiles and car collections
-
-### Version 1.2 (Q3 2024)
 - **Auction System**: Live bidding for premium vehicles
 - **Insurance Integration**: Car insurance quotes and purchase
 - **Financing Calculator**: Loan calculations and pre-approval
 - **Video Calls**: Virtual car tours with sellers
-
-### Version 1.3 (Q4 2024)
 - **Blockchain Integration**: NFT certificates for premium cars
 - **AI Image Analysis**: Automatic damage detection
 - **Multi-language Support**: Internationalization
 - **Advanced Analytics**: Machine learning insights
-
-### Version 2.0 (Q1 2025)
 - **Marketplace Expansion**: Motorcycles, boats, and RVs
 - **Enterprise Features**: Fleet management tools
 - **API Marketplace**: Third-party integrations
@@ -345,4 +338,4 @@ We gratefully acknowledge the contributions of:
 
 **Built with ❤️ by [Jamachi Mauricennadi](https://me.fushionhubai.com.ng)**
 
-*JodisCars v1.0 - Revolutionizing the automotive marketplace experience*
+*JodisCars v1.2 - Revolutionizing the automotive marketplace experience*
