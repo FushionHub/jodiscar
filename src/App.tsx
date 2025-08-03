@@ -10,6 +10,8 @@ import AIChat from './components/ai/AIChat';
 import Home from './pages/Home';
 import About from './pages/About';
 import FAQ from './pages/FAQ';
+import Cars from './pages/Cars';
+import CarDetails from './pages/CarDetails';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/faq" element={<FAQ />} />
+                <Route path="/cars" element={<Cars />} />
+                <Route path="/cars/:id" element={<CarDetails />} />
                 {/* More routes will be added as we build more pages */}
               </Routes>
             </main>
