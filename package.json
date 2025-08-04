@@ -14,6 +14,7 @@
     "@hookform/resolvers": "^5.2.1",
     "@supabase/supabase-js": "^2.53.0",
     "@types/js-cookie": "^3.0.6",
+    "@vercel/analytics": "^1.5.0",
     "date-fns": "^4.1.0",
     "dompurify": "^3.2.6",
     "framer-motion": "^12.23.12",

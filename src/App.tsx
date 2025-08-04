@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { Toaster } from 'react-hot-toast';
+import { Analytics } from '@vercel/analytics/react';
 import { AppProvider } from './context/AppContext';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
@@ -34,6 +35,7 @@ function App() {
             <CookieConsent />
             <AIChat />
             <Toaster position="top-right" />
+            <Analytics />
           </div>
         </Router>
       </AppProvider>
