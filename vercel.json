@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/:path((?!api/|cars.json|_next/|static/|favicon.ico|sw.js).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
