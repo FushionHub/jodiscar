@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { HeartIcon, EyeIcon, CalendarIcon, GaugeIcon } from '@heroicons/react/24/outline';
+import { HeartIcon, EyeIcon, CalendarIcon, RocketLaunchIcon } from '@heroicons/react/24/outline';
 import { HeartIcon as HeartSolidIcon } from '@heroicons/react/24/solid';
 import { Car } from '../../types';
 import { useApp } from '../../context/AppContext';
@@ -81,7 +81,7 @@ const CarCard: React.FC<CarCardProps> = ({ car }) => {
             {car.year}
           </div>
           <div className="flex items-center">
-            <GaugeIcon className="h-4 w-4 mr-2 text-gray-400" />
+            <RocketLaunchIcon className="h-4 w-4 mr-2 text-gray-400" />
             {car.mileage.toLocaleString()} mi
           </div>
         </div>
