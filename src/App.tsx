@@ -13,6 +13,9 @@ import About from './pages/About';
 import FAQ from './pages/FAQ';
 import Cars from './pages/Cars';
 import CarDetails from './pages/CarDetails';
+import Login from './pages/auth/Login';
+import Signup from './pages/auth/Signup';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -28,7 +31,9 @@ function App() {
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/cars" element={<Cars />} />
                 <Route path="/cars/:id" element={<CarDetails />} />
-                {/* More routes will be added as we build more pages */}
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
             <Footer />
