@@ -116,7 +116,13 @@ const CarDetails: React.FC = () => {
               </div>
 
                <div className="mt-8 flex space-x-4">
-                <button className="flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                <Link
+                  to={`/cars/${car.id}/checkout`}
+                  className="flex-1 bg-blue-600 text-white text-center py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                >
+                  Buy Now
+                </Link>
+                 <button className="flex-1 bg-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transition-colors">
                   Contact Seller
                 </button>
                 <button className="flex-1 bg-gray-200 text-gray-800 py-3 px-6 rounded-lg font-semibold hover:bg-gray-300 transition-colors">

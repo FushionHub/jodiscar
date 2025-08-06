@@ -16,6 +16,10 @@ import CarDetails from './pages/CarDetails';
 import Login from './pages/auth/Login';
 import Signup from './pages/auth/Signup';
 import NotFound from './pages/NotFound';
+import Dashboard from './pages/Dashboard';
+import Profile from './pages/dashboard/Profile';
+import BookInspection from './pages/inspections/BookInspection';
+import CarCheckout from './pages/cars/CarCheckout';
 
 function App() {
   return (
@@ -31,8 +35,14 @@ function App() {
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/cars" element={<Cars />} />
                 <Route path="/cars/:id" element={<CarDetails />} />
+                <Route path="/cars/:id/checkout" element={<CarCheckout />} />
+                <Route path="/inspections/book" element={<BookInspection />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
+                <Route path="/dashboard" element={<Dashboard />}>
+                  <Route index element={<Profile />} />
+                  <Route path="profile" element={<Profile />} />
+                </Route>
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

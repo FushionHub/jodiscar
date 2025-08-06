@@ -1,10 +1,12 @@
 import React, { createContext, useContext, useReducer, ReactNode, useEffect } from 'react';
-import { User, Currency, Car, AppSettings } from '../types';
+import { User, Currency, Car, AppSettings, Session } from '../types';
 import { getCurrencyRates } from '../utils/currency';
+import { supabase } from '../utils/supabase';
 import toast from 'react-hot-toast';
 
 interface AppState {
   user: User | null;
+  session: Session | null;
   isAuthenticated: boolean;
   currency: Currency;
   cars: Car[];
@@ -21,6 +23,7 @@ interface AppState {
 
 type AppAction =
   | { type: 'SET_USER'; payload: User | null }
+  | { type: 'SET_SESSION'; payload: Session | null }
   | { type: 'SET_CURRENCY'; payload: Currency }
   | { type: 'SET_CARS'; payload: Car[] }
   | { type: 'SET_LOADING'; payload: boolean }
@@ -30,6 +33,7 @@ type AppAction =
 
 const initialState: AppState = {
   user: null,
+  session: null,
   isAuthenticated: false,
   currency: 'USD',
   cars: [],
@@ -83,6 +87,13 @@ const appReducer = (state: AppState, action: AppAction): AppState => {
         user: action.payload,
         isAuthenticated: !!action.payload,
       };
+    case 'SET_SESSION':
+      return {
+        ...state,
+        session: action.payload,
+        user: action.payload?.user ?? null,
+        isAuthenticated: !!action.payload,
+      };
     case 'SET_CURRENCY':
       return { ...state, currency: action.payload };
     case 'SET_CARS':
@@ -115,6 +126,12 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
   const [state, dispatch] = useReducer(appReducer, initialState);
 
   useEffect(() => {
+    const { data: authListener } = supabase.auth.onAuthStateChange(
+      (_event, session) => {
+        dispatch({ type: 'SET_SESSION', payload: session });
+      }
+    );
+
     // Load currency rates on app start
     const loadCurrencyRates = async () => {
       try {
@@ -138,6 +155,10 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     if (savedCurrency) {
       dispatch({ type: 'SET_CURRENCY', payload: savedCurrency });
     }
+
+    return () => {
+      authListener.subscription.unsubscribe();
+    };
   }, []);
 
   return (

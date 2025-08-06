@@ -1,18 +1,18 @@
-export interface User {
-  id: string;
-  email: string;
-  username: string;
-  firstName: string;
-  lastName: string;
+import { AuthUser, Session } from '@supabase/supabase-js';
+
+export type { Session };
+
+export interface User extends AuthUser {
+  username?: string;
+  firstName?: string;
+  lastName?: string;
   phone?: string;
   avatar?: string;
-  role: 'user' | 'admin';
-  isVerified: boolean;
+  role?: 'user' | 'admin';
+  isVerified?: boolean;
   subscription?: Subscription;
-  savedCards: PaymentCard[];
-  preferences: UserPreferences;
-  createdAt: string;
-  lastLogin?: string;
+  savedCards?: PaymentCard[];
+  preferences?: UserPreferences;
 }
 
 export interface Car {
