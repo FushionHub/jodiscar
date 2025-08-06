@@ -30,8 +30,8 @@ const Header: React.FC = () => {
     { name: 'Contact', href: '/contact' },
   ];
 
-  const handleSignOut = () => {
-    // TODO: Implement sign out logic
+  const handleSignOut = async () => {
+    await supabase.auth.signOut();
     navigate('/');
   };
 
@@ -121,7 +121,7 @@ const Header: React.FC = () => {
                   Sign In
                 </Link>
                 <Link
-                  to="/register"
+                  to="/signup"
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
                 >
                   Sign Up
@@ -167,7 +167,7 @@ const Header: React.FC = () => {
                     Sign In
                   </Link>
                   <Link
-                    to="/register"
+                    to="/signup"
                     className="block px-3 py-2 text-base font-medium bg-blue-600 text-white rounded-md mt-2 text-center hover:bg-blue-700"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
