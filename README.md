@@ -15,8 +15,6 @@ JodisCars is a sophisticated Progressive Web Application (PWA) for buying and se
 - **Real-time Currency Conversion**: Live exchange rates for accurate pricing
 
 ### Payment Systems
-- **PayPal Integration**: Secure PayPal payments
-- **Stripe**: Credit/debit card processing
 - **Flutterwave**: African payment gateway
 - **Paystack**: Nigerian payment processing
 - **Cryptocurrency**: Bitcoin, USDT, BNB support
@@ -99,7 +97,6 @@ JodisCars is a sophisticated Progressive Web Application (PWA) for buying and se
    ```env
    VITE_SUPABASE_URL=your_supabase_url
    VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-   VITE_STRIPE_PUBLIC_KEY=your_stripe_public_key
    VITE_FLUTTERWAVE_PUBLIC_KEY=your_flutterwave_public_key
    VITE_PAYSTACK_PUBLIC_KEY=your_paystack_public_key
    VITE_GEMINI_API_KEY=your_gemini_api_key
@@ -130,23 +127,15 @@ JodisCars is a Progressive Web App with the following capabilities:
 
 ### Payment Gateway Setup
 
-1. **Stripe**
-   - Get API keys from [Stripe Dashboard](https://dashboard.stripe.com)
-   - Add to admin panel under Payment Settings
-
-2. **PayPal**
-   - Create app in [PayPal Developer Console](https://developer.paypal.com)
-   - Configure client ID and secret
-
-3. **Flutterwave**
+1. **Flutterwave**
    - Register at [Flutterwave](https://flutterwave.com)
    - Get public and secret keys
 
-4. **Paystack**
+2. **Paystack**
    - Sign up at [Paystack](https://paystack.com)
    - Obtain API keys from dashboard
 
-5. **Cryptocurrency**
+3. **Cryptocurrency**
    - Configure crypto wallet addresses
    - Set up payment verification webhooks
 
@@ -318,7 +307,6 @@ We gratefully acknowledge the contributions of:
 ### UI/UX Inspiration
 - **cars.com**: Design inspiration and best practices
 - **Tesla**: Clean and modern automotive design
-- **Stripe**: Payment interface design patterns
 - **Airbnb**: User experience and booking flows
 
 ### Technology Partners
@@ -331,7 +319,7 @@ We gratefully acknowledge the contributions of:
 - **Early Beta Testers**: For valuable feedback and bug reports
 - **Translation Contributors**: For internationalization support
 - **Documentation Writers**: For improving user guides
-- **Security Researchers**: For responsible disclosure of vulnerabilities
+- **Security Researchers**: for responsible disclosure of vulnerabilities
 
 ### Special Thanks
 - **Nigerian Tech Community**: For continuous support and feedback
