@@ -6,10 +6,6 @@ export default defineConfig({
   plugins: [react()],
   optimizeDeps: {
     exclude: ['lucide-react'],
-  },
-  build: {
-    rollupOptions: {
-      external: ['@stripe/react-stripe-js', '@stripe/stripe-js'],
-    },
+    include: ['@stripe/react-stripe-js', '@stripe/stripe-js'],
   },
 });

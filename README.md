@@ -99,6 +99,9 @@ JodisCars is a sophisticated Progressive Web Application (PWA) for buying and se
    ```env
    VITE_SUPABASE_URL=your_supabase_url
    VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+   VITE_STRIPE_PUBLIC_KEY=your_stripe_public_key
+   VITE_FLUTTERWAVE_PUBLIC_KEY=your_flutterwave_public_key
+   VITE_PAYSTACK_PUBLIC_KEY=your_paystack_public_key
    VITE_GEMINI_API_KEY=your_gemini_api_key
    ```
 
@@ -111,6 +114,8 @@ JodisCars is a sophisticated Progressive Web Application (PWA) for buying and se
    ```bash
    npm run build
    ```
+
+**Note:** A `vercel.json` file is included in the root of the project to handle client-side routing on Vercel.
 
 ## 📱 PWA Features
 
