@@ -3,8 +3,18 @@ import { Helmet } from 'react-helmet-async';
 import { Elements } from '@stripe/react-stripe-js';
 import { stripePromise } from '../../utils/stripe';
 import CheckoutForm from '../../components/common/CheckoutForm';
+import FlutterwaveCheckout from '../../components/common/FlutterwaveCheckout';
+import PaystackCheckout from '../../components/common/PaystackCheckout';
 
 const BookInspection: React.FC = () => {
+  // Dummy data for now
+  const inspectionFee = 5000;
+  const user = {
+    email: 'customer@example.com',
+    name: 'John Doe',
+    phone: '08012345678',
+  };
+
   return (
     <>
       <Helmet>
@@ -21,6 +31,22 @@ const BookInspection: React.FC = () => {
           <Elements stripe={stripePromise}>
             <CheckoutForm />
           </Elements>
+          <div className="mt-6">
+            <FlutterwaveCheckout
+              amount={inspectionFee}
+              email={user.email}
+              name={user.name}
+              phone={user.phone}
+            />
+          </div>
+          <div className="mt-6">
+            <PaystackCheckout
+              amount={inspectionFee}
+              email={user.email}
+              name={user.name}
+              phone={user.phone}
+            />
+          </div>
         </div>
       </div>
     </>
