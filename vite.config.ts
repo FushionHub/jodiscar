@@ -6,6 +6,5 @@ export default defineConfig({
   plugins: [react()],
   optimizeDeps: {
     exclude: ['lucide-react'],
-    include: ['@stripe/react-stripe-js', '@stripe/stripe-js'],
   },
 });

@@ -1,8 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Elements } from '@stripe/react-stripe-js';
-import { stripePromise } from '../../utils/stripe';
-import CheckoutForm from '../../components/common/CheckoutForm';
 import FlutterwaveCheckout from '../../components/common/FlutterwaveCheckout';
 import PaystackCheckout from '../../components/common/PaystackCheckout';
 
@@ -28,9 +25,6 @@ const BookInspection: React.FC = () => {
           </p>
         </div>
         <div className="mt-12">
-          <Elements stripe={stripePromise}>
-            <CheckoutForm />
-          </Elements>
           <div className="mt-6">
             <FlutterwaveCheckout
               amount={inspectionFee}
